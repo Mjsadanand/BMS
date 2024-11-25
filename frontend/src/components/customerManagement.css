@@ -1,0 +1,249 @@
+/* Scoped styling for ClientManagement component */
+.client-management-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa; /* Light background for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.client-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.client-form input,
+.client-form select,
+.client-form textarea {
+  margin: 5px 0;
+  padding: 12px;
+  width: 100%;
+  font-size: 14px; /* Updated font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-form input:focus,
+.client-form select:focus,
+.client-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.client-form textarea {
+  resize: none;
+  height: 100px; /* Slightly larger height for better usability */
+}
+
+.client-form button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.client-form button:hover {
+  transform: scale(1.05); /* Slight pop-out effect */
+  opacity: 0.9;
+}
+
+/* Button colors */
+.client-form .add-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.client-form .update-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.client-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.client-management-table th,
+.client-management-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.client-management-table th {
+  background-color: #1f2021; /* Brighter header */
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px; /* Updated font size */
+  text-transform: uppercase;
+}
+
+.client-management-table td {
+  background-color: #f9f9f9;
+}
+
+.client-management-table tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+.client-management-table button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.client-management-table button:hover {
+  transform: scale(1.1);
+}
+
+/* Action buttons */
+.client-management-table button.edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.client-management-table button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.client-management-table button.edit:hover {
+  background-color: #e0a800;
+}
+
+.client-management-table button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .client-management-container {
+    padding: 10px;
+  }
+
+  .client-management-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  .client-management-table th,
+  .client-management-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 5px;
+  }
+
+  .client-management-table td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .client-management-table th {
+    font-size: 14px; /* Consistent font size for small screens */
+    text-transform: capitalize; /* Smaller and less bold on mobile */
+  }
+
+  .client-form input,
+  .client-form select,
+  .client-form textarea {
+    padding: 10px;
+    font-size: 14px; /* Ensure consistency on mobile */
+  }
+
+  .client-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.client-image {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.image-preview {
+  margin-top: 10px;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-icon {
+  margin-right: 10px; /* Spacing between icon and input */
+  color: #888; /* Subtle color */
+  font-size: 18px; /* Adjust size */
+}
+
+.search-bar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+
