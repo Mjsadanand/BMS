@@ -6,7 +6,7 @@ import {
   updateAd,
   deleteAd
 } from '../controller/adController.js';
-import { checkObjectId } from '../middleware/validation.js'; // Middleware for ID validation (optional)
+import { checkObjectId } from '../middleWare/validation.js'; // Middleware for ID validation (optional)
 
 const router = express.Router();
 
