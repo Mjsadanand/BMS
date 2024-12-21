@@ -32,9 +32,9 @@ const Property = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const ownersResponse = await axios.get("http://localhost:5000/api/property-owners");
+        const ownersResponse = await axios.get("https://bms-ef6q.onrender.com/api/property-owners");
         setOwners(ownersResponse.data);
-        const propertiesResponse = await axios.get("http://localhost:5000/api/properties");
+        const propertiesResponse = await axios.get("https://bms-ef6q.onrender.com/api/properties");
         setProperties(propertiesResponse.data);
         setLoading(false);
       } catch (error) {
@@ -73,9 +73,9 @@ const Property = () => {
     try {
       // If editing an owner, send PUT request, otherwise POST
       if (editingOwnerId) {
-        await axios.put(`http://localhost:5000/api/property-owners/${editingOwnerId}`, ownerToSubmit);
+        await axios.put(`https://bms-ef6q.onrender.com/api/property-owners/${editingOwnerId}`, ownerToSubmit);
       } else {
-        await axios.post("http://localhost:5000/api/property-owners", ownerToSubmit);
+        await axios.post("https://bms-ef6q.onrender.com/api/property-owners", ownerToSubmit);
       }
       setOwnerData({
         name: "",
@@ -85,7 +85,7 @@ const Property = () => {
         email: "",
       });
       setEditingOwnerId(null); // Reset editing owner
-      const ownersResponse = await axios.get("http://localhost:5000/api/property-owners");
+      const ownersResponse = await axios.get("https://bms-ef6q.onrender.com/api/property-owners");
       setOwners(ownersResponse.data);
     } catch (error) {
       console.error("Error submitting owner:", error);
@@ -122,9 +122,9 @@ const Property = () => {
     try {
       // If editing a property, update it, otherwise create a new one
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/properties/${editingId}`, propertyToSend);
+        await axios.put(`https://bms-ef6q.onrender.com/api/properties/${editingId}`, propertyToSend);
       } else {
-        await axios.post("http://localhost:5000/api/properties", propertyToSend);
+        await axios.post("https://bms-ef6q.onrender.com/api/properties", propertyToSend);
       }
       setPropertyData({
         property_owner_id: "",
@@ -136,7 +136,7 @@ const Property = () => {
         address: "",
       });
       setEditingId(null); // Reset editing state
-      const propertiesResponse = await axios.get("http://localhost:5000/api/properties");
+      const propertiesResponse = await axios.get("https://bms-ef6q.onrender.com/api/properties");
       setProperties(propertiesResponse.data);
       alert("Property saved successfully!");
     } catch (error) {
@@ -160,8 +160,8 @@ const Property = () => {
 
   const handleDeleteProperty = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/properties/${id}`);
-      const propertiesResponse = await axios.get("http://localhost:5000/api/properties");
+      await axios.delete(`https://bms-ef6q.onrender.com/api/properties/${id}`);
+      const propertiesResponse = await axios.get("https://bms-ef6q.onrender.com/api/properties");
       setProperties(propertiesResponse.data);
       alert("Property deleted successfully!");
     } catch (error) {
@@ -185,8 +185,8 @@ const Property = () => {
 
   const handleDeleteOwner = async (ownerId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/property-owners/${ownerId}`);
-      const ownersResponse = await axios.get("http://localhost:5000/api/property-owners");
+      await axios.delete(`https://bms-ef6q.onrender.com/api/property-owners/${ownerId}`);
+      const ownersResponse = await axios.get("https://bms-ef6q.onrender.com/api/property-owners");
       setOwners(ownersResponse.data);
       alert("Owner deleted successfully!");
     } catch (error) {

@@ -28,7 +28,7 @@ const InvoiceForm = () => {
     // Fetch all available contract IDs
     const fetchContractIds = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/ad-contracts');
+        const response = await fetch('https://bms-ef6q.onrender.com/api/ad-contracts');
         if (!response.ok) throw new Error('Failed to fetch contract IDs');
 
         const data = await response.json();
@@ -77,7 +77,7 @@ const InvoiceForm = () => {
         },
       };
 
-      const response = await fetch('http://localhost:5000/api/invoices/create', {
+      const response = await fetch('https://bms-ef6q.onrender.com/api/invoices/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ const InvoiceForm = () => {
 
   const handleDownloadInvoice = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/invoices/${invoice._id}/download`, {
+      const response = await fetch(`https://bms-ef6q.onrender.com/api/invoices/${invoice._id}/download`, {
         method: 'GET',
       });
       if (!response.ok) throw new Error('Failed to download invoice');

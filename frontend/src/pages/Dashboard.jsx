@@ -32,7 +32,7 @@ const Dashboard = () => {
   // Fetch stats and recent activities from the backend
   const fetchDashboardData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/dashboard-data');
+      const response = await fetch('https://bms-ef6q.onrender.com/api/dashboard-data');
       if (!response.ok) throw new Error('Failed to fetch dashboard data');
 
       const data = await response.json();

@@ -20,7 +20,7 @@ function Login() {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://bms-ef6q.onrender.com/api/auth/login", {
         email,
         password,
         headers: {

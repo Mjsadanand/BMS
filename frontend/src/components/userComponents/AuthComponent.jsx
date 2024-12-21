@@ -25,7 +25,7 @@ const AuthComponent = () => {
   const handleEmailSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/account/register', {
+      const response = await fetch('https://bms-ef6q.onrender.com/api/account/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),
@@ -55,7 +55,7 @@ const AuthComponent = () => {
   const handleEmailSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/account/authenticate', {
+      const response = await fetch('https://bms-ef6q.onrender.com/api/account/authenticate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

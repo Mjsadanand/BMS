@@ -37,7 +37,7 @@ const Staff = () => {
 
   const fetchStaff = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/staff');
+      const response = await fetch('https://bms-ef6q.onrender.com/api/staff');
       const data = await response.json();
       setStaff(data);
     } catch (error) {
@@ -48,7 +48,7 @@ const Staff = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch('http://localhost:5000/api/staff', {
+      await fetch('https://bms-ef6q.onrender.com/api/staff', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const Staff = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this staff member?')) {
       try {
-        await fetch(`http://localhost:5000/api/staff/${id}`, {
+        await fetch(`https://bms-ef6q.onrender.com/api/staff/${id}`, {
           method: 'DELETE',
         });
         fetchStaff();

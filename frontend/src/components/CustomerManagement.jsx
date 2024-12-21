@@ -23,7 +23,7 @@ const CustomerManagement = () => {
   // Fetch clients on component mount
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/clients")
+      .get("https://bms-ef6q.onrender.com/api/clients")
       .then((response) => {
         setClients(response.data);
       })
@@ -60,7 +60,7 @@ const CustomerManagement = () => {
       return;
     }
 
-    axios.post("http://localhost:5000/api/clients", clientData)
+    axios.post("https://bms-ef6q.onrender.com/api/clients", clientData)
       .then((response) => {
         setClients([...clients, response.data]);
         setClientData({
@@ -90,7 +90,7 @@ const CustomerManagement = () => {
 
   // Update client data
   const handleUpdateClient = () => {
-    axios.put(`http://localhost:5000/api/clients/${currentId}`, clientData)
+    axios.put(`https://bms-ef6q.onrender.com/api/clients/${currentId}`, clientData)
       .then((response) => {
         setClients(clients.map((c) => c._id === currentId ? response.data : c));
         setEditing(false);
@@ -112,7 +112,7 @@ const CustomerManagement = () => {
 
   // Delete a client
   const handleDeleteClient = (id) => {
-    axios.delete(`http://localhost:5000/api/clients/${id}`)
+    axios.delete(`https://bms-ef6q.onrender.com/api/clients/${id}`)
       .then(() => {
         setClients(clients.filter((c) => c._id !== id));
       })

@@ -17,7 +17,7 @@ const AdContractManagement = () => {
 
   const fetchContracts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/ad-contracts');
+      const response = await axios.get('https://bms-ef6q.onrender.com/api/ad-contracts');
       // Ensure that the response data is an array
       const contractsData = Array.isArray(response.data) ? response.data : [];
       setContracts(contractsData);
@@ -43,7 +43,7 @@ const AdContractManagement = () => {
     formData.append('document_file', contractData.document_file);
   
     try {
-      await axios.post('http://localhost:5000/api/ad-contracts', formData, {
+      await axios.post('https://bms-ef6q.onrender.com/api/ad-contracts', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       fetchContracts(); // Refresh the list
@@ -61,7 +61,7 @@ const AdContractManagement = () => {
   
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/ad-contracts/${id}`);
+      await axios.delete(`https://bms-ef6q.onrender.com/api/ad-contracts/${id}`);
       fetchContracts(); // Refresh the list
     } catch (error) {
       console.error('Error deleting contract', error);

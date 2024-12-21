@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './AdminLayout.css';
 
-const API_URL = 'http://localhost:5000/api/ads';
-const CLIENTS_API_URL = 'http://localhost:5000/api/clients'; // Update this URL to your clients API endpoint
+const API_URL = 'https://bms-ef6q.onrender.com/api/ads';
+const CLIENTS_API_URL = 'https://bms-ef6q.onrender.com/api/clients'; // Update this URL to your clients API endpoint
 
 const AdManagement = () => {
   const [ads, setAds] = useState([]);
