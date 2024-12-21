@@ -106,7 +106,7 @@ app.get('*',(_,res)=>{
   res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"));
 })
 // Start the server
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running at the port ${PORT}`);
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+  console.log(`Server is running at the port ${port}`);
 });
