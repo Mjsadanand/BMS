@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #f4f4f9;
+  background-color: #f4f4f9; 
 }
 
 /* Navbar */
@@ -316,7 +316,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .fade-in {
@@ -324,7 +324,7 @@ body {
 }
 
 .fade-out {
-  opacity: 0;
+  opacity: 1;
 }
 
 .banner-content {

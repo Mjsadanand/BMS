@@ -12,7 +12,7 @@ import image4 from '../assets/back4.jpg';
 import image6 from '../assets/back6.jpg';
 import image7 from '../assets/back7.jpg';
 import image8 from '../assets/back8.jpg';
-import image9 from '../assets/back9.jpg';
+import image9 from '../assets/back9.jpg'; 
 import image10 from '../assets/back10.jpg';
 import serviceImage1 from '../assets/service1.png';
 import serviceImage2 from '../assets/Digi.webp';
