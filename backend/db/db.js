@@ -4,8 +4,8 @@ const MONGODB_URL = process.env.MONGO_URI || 'mongodb+srv://sadanandjm:Veda%4071
 const connectToDatabase = async () => {
     try { 
         await mongoose.connect(MONGODB_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true,
         });
         console.log("Connected to MongoDB");
     } catch (error) {
