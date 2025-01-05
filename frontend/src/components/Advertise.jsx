@@ -100,7 +100,7 @@ const AdManagement = () => {
       <h2>Ad Management</h2>
 
       {/* Ad Creation Form */}
-      <form onSubmit={handleSubmit} className="ad-form">
+      <form  className="ad-form">
         <input
           type="text"
           name="add_name"
@@ -139,7 +139,7 @@ const AdManagement = () => {
 
 
         <input type="file" name="file" onChange={handleChange} required />
-        <button type="submit">Create Ad</button>
+        <button onClick={handleSubmit} type="submit">Create Ad</button>
       </form>
 
       {error && <div style={{ color: 'red' }}>{error}</div>}
