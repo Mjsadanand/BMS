@@ -319,13 +319,13 @@ body {
   transition: none; /* Remove transition for sudden changes */
 }
 
-.fade-in {
+/* .fade-in {
   opacity: 1;
 }
 
 .fade-out {
   opacity: 0;
-}
+} */
 
 .banner-content {
   position: absolute;
