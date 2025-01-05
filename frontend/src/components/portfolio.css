@@ -316,7 +316,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: opacity 1s ease-in-out;
+  transition: none; /* Remove transition for sudden changes */
 }
 
 .fade-in {
@@ -448,23 +448,6 @@ body {
   overflow: hidden;
 }
 
-/* Image styling */
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Fade in/out transitions */
-.fade-in {
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
-}
 
 /* Banner content (text and button on top of image) */
 .banner-content {
